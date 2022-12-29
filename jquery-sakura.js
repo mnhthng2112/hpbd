@@ -54,8 +54,8 @@
             blowAnimations: ['blow-soft-left', 'blow-medium-left', 'blow-hard-left', 'blow-soft-right', 'blow-medium-right', 'blow-hard-right'],
             className: 'sakura',
             fallSpeed: 1,
-            maxSize: 14,
-            minSize: 9,
+            maxSize: 30,
+            minSize: 15,
             newOn: 300,
             swayAnimations: ['sway-0', 'sway-1', 'sway-2', 'sway-3', 'sway-4', 'sway-5', 'sway-6', 'sway-7', 'sway-8']
         };
@@ -68,7 +68,7 @@
         var sakura = $('<div class="' + options.className + '" />');
 
         // Set the overflow-x CSS property on the body to prevent horizontal scrollbars.
-        $('body').css({ 'overflow-x': 'hidden' });
+        $('.content').css({ 'overflow-x': 'hidden' });
 
         // Function that inserts new petals into the document.
         var petalCreator = function () {
@@ -86,7 +86,7 @@
                 swayAnimation + ' ' + getRandomInt(2, 4) + 's linear 0s infinite';
             var petal = sakura.clone();
             var size = getRandomInt(options.minSize, options.maxSize);
-            var startPosLeft = Math.random() * documentWidth - 100;
+            var startPosLeft = Math.random() * documentWidth - 200;
             var startPosTop = -((Math.random() * 20) + 15);
 
             // Apply Event Listener to remove petals that reach the bottom of the page.
@@ -113,7 +113,7 @@
                     'margin-top': startPosTop,
                     width: size
                 })
-                .appendTo('body');
+                .appendTo('.content');
         };
 
 
