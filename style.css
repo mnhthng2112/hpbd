@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'Grestal';
+    src: url(GrestalScriptDemoRegular-dBYX.ttf);
+}
+
+
+/* style  */
+
+body {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.content {
+    font-family: 'Grestal';
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: url(33Hn.gif);
+}
+
+.content::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #faebd7;
+}
+
+.header-title {
+    position: relative;
+    font-size: 50px;
+    z-index: 1000;
+    color: #ba657d;
+    filter: drop-shadow(3px 0px 10px #f4d0d0);
+}
+
+.animation {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 2s steps(400, end);
+}
+
+.animation-delay {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing-delay 4s steps(400, end);
+}
+
+.animation-delay-2 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    font-size: 16px;
+    animation: typing-delay-2 6s steps(400, end);
+}
+
+@keyframes typing {
+    0% {
+        width: 0
+    }
+    100% {
+        width: 100%
+    }
+}
+
+@keyframes typing-delay {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        width: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes typing-delay-2 {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    66% {
+        width: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
